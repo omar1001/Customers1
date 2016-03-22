@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_view_cutomers_layout">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:id="@+id/sort_buttons_linearlayout">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/code_sort_button"
+            android:id="@+id/code_sort_button"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/name_sort_button"
+            android:id="@+id/name_sort_button"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/line_sort_button"
+            android:id="@+id/line_sort_button"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Customers_listView"
+        android:layout_below="@+id/sort_buttons_linearlayout"
+        android:layout_above="@+id/new_customer_view_customers">
+    </ListView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/new_customer_view_customers"
+        android:text="New customer"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+

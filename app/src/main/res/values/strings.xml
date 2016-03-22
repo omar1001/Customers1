@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Customers</string>
+    <string name="line_sort_button">Line</string>
+    <string name="name_sort_button">Name</string>
+    <string name="code_sort_button">Code</string>
+
+    <string name="name_entry">Name</string>
+    <string name="code_entry">Code</string>
+    <string name="address_entry">Address</string>
+    <string name="line_entry">Line</string>
+    <string name="phone_entry">Phone</string>
+    <string name="photo_entry">Take Photo</string>
+    <string name="location_entry">get location</string>
+    <string name="submit_entry">save customer</string>
+    <string name="call_button">Call</string>
+    <string name="edit_customer">Edit Customer</string>
+</resources>
