@@ -90,7 +90,7 @@ public class FragmentNewCustomer extends Fragment {
         //Spinner Adapter
         List<String> array = mDBHandler.getLines();
         mSpinnerAdapter =
-                new ArrayAdapter<String>(
+                new ArrayAdapter<>(
                         getActivity(), // The current context (this activity)
                         R.layout.spinner_item, // The name of the layout ID.
                         R.id.spinner_item,// The ID of the textview to populate.
@@ -223,10 +223,10 @@ public class FragmentNewCustomer extends Fragment {
                             Integer.toString(1000));
             newName = Integer.toString(Integer.parseInt(newName) + 1);
             sharedPreferences.edit().putString(COUNTER, newName).apply();
-            sharedPreferences.edit().commit();
+            sharedPreferences.edit().apply();
         } else {
             newName = Integer.toString(1000);
-            sharedPreferences.edit().putString(COUNTER, newName).commit();
+            sharedPreferences.edit().putString(COUNTER, newName).apply();
         }
 
         return newName;

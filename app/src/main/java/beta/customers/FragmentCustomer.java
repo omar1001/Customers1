@@ -54,15 +54,15 @@ public class FragmentCustomer extends Fragment {
                         @Override
                         public void onClick(View v) {
 
-                            Uri geoLocation = Uri.parse("geo:" + customer.locationLat + "," +
-                                    customer.locationLong);
+                            Uri geoLocation = Uri.parse("geo:0,0?q=" + customer.locationLat + ", " +
+                                    customer.locationLong+"(" + customer.name + ")");
 
-                            Intent intent = new Intent(Intent.ACTION_VIEW);
-                            intent.setData(geoLocation);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, geoLocation);
+                            intent.setPackage("com.google.android.apps.maps");
                             if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(getActivity(), "No app instaled to show maps",
+                                Toast.makeText(getActivity(), "No maps app installed",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
